@@ -1,3 +1,127 @@
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: rgb(234, 234, 234);
+}
 
+h1 {
+  text-align: center;
+  font-weight: 400;
+}
+
+h3 {
+  position: relative;
+  font-weight: 500;
+}
+
+h3, i, p, button {
+  position: relative;
+  z-index: 0;
+}
+
+p {
+  display: none;
+}
+
+.faq-container {
+  width: 500px;
+  margin-top: 10px;
+}
+
+.faq {
+  overflow: hidden;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid rgb(140, 140, 140);
+  border-radius: 10px;
+  margin: 20px;
+  transition: 350ms ease;
+  box-shadow: 1px 1px 3px rgb(164, 164, 164);
+  transform: background-color 350ms ease;
+}
+
+.faq.active {
+  background-color: white;
+}
+
+.faq.active::before {
+  position: absolute;
+  content: "\f075";
+  font-family: "font awesome 5 free";
+  font-size: 100px;
+  left: 20px;
+  top: 20px;
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.151);
+  z-index: 0;
+}
+
+.faq.active::after {
+  position: absolute;
+  content: "\f075";
+  font-family: "font awesome 5 free";
+  font-size: 100px;
+  left: -20px;
+  top: -5px;
+  opacity: 1;
+  color: rgba(0, 255, 17, 0.207);
+  z-index: 0;
+  transform: rotateY(180deg);
+}
+
+.faq.active p {
+  display: block;
+}
+
+button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  right: 15px;
+  top: 25px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: grey;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.faq.active button {
+  background-color: #9fa4a8;
+}
+
+.faq.active button .fa-chevron-down {
+  display: none;
+}
+
+button .fa-times {
+  display: none;
+  color: white;
+  margin: 0;
+  border-radius: 100px;
+}
+
+.faq.active button .fa-times {
+  display: block;
+  font-size: 10px;
+  height: 9px;
+  width: 9px;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
